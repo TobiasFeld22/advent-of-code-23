@@ -43,7 +43,6 @@ fn parse_rounds(input: &str) -> Vec<Round> {
 #[derive(Debug)]
 struct Game {
     id: usize,
-    rounds: Vec<Round>,
     max: Round,
 }
 
@@ -65,7 +64,7 @@ impl Game {
                 max.red = round.red;
             }
         });
-        Self { id, rounds, max }
+        Self { id, max }
     }
 }
 
